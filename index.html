@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and responsive To-Do app to organize tasks and track progress.">
+    <title>To-Do App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="header">
+            <div>
+                <h1>My <span>Tasks</span></h1>
+                <p>Organize your day, one task at a time.</p>
+            </div>
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Toggle color theme" title="Toggle theme">🌙</button>
+        </header>
+
+        <section class="task-input-section" aria-label="Add a task">
+            <input id="task-input" type="text" placeholder="What do you need to do?" aria-label="New task" autocomplete="off">
+            <button id="add-task-btn" type="button">+ Add Task</button>
+        </section>
+
+        <section class="task-stats" aria-label="Task statistics">
+            <div>
+                <h3 id="total-tasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+            <div>
+                <h3 id="active-tasks">0</h3>
+                <p>Active</p>
+            </div>
+            <div>
+                <h3 id="completed-tasks">0</h3>
+                <p>Completed</p>
+            </div>
+        </section>
+
+        <section class="progress-section" aria-label="Task completion progress">
+            <div class="progress-header">
+                <h2>Your Progress</h2>
+                <span id="progress-percentage">0%</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-label="Tasks completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div id="progress-fill"></div>
+            </div>
+            <p id="progress-message">Start adding your tasks!</p>
+        </section>
+
+        <section class="filter-section" aria-label="Filter and search tasks">
+            <div class="filter-buttons" role="group" aria-label="Task filters">
+                <button class="filter-btn active" type="button" data-filter="all">All</button>
+                <button class="filter-btn" type="button" data-filter="active">Active</button>
+                <button class="filter-btn" type="button" data-filter="completed">Completed</button>
+            </div>
+            <label class="search-box">
+                <span aria-hidden="true">🔍</span>
+                <input id="search-input" type="search" placeholder="Search tasks..." aria-label="Search tasks">
+            </label>
+        </section>
+
+        <section class="tasks-section">
+            <div class="section-heading">
+                <h2>Active Tasks</h2>
+            </div>
+            <div id="task-list"></div>
+            <p id="active-empty" class="empty-message">No active tasks. Add a task to get started!</p>
+        </section>
+
+        <section class="completed-section">
+            <div class="section-heading">
+                <h2>Completed Tasks</h2>
+                <button id="clear-completed-btn" type="button">Clear Completed</button>
+            </div>
+            <div id="completed-list"></div>
+            <p id="completed-empty" class="empty-message">No completed tasks yet.</p>
+        </section>
+
+        <foote
+            <p>Stay focused and make today productive.</p>
+        </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
